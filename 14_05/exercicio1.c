@@ -18,4 +18,5 @@ int main(void){
     }
     printf("a soma é: %lf\n",soma);
 
+    fclose(arquivo);
 }
