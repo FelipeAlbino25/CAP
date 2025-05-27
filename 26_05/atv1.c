@@ -7,6 +7,11 @@ double distance3D(double x1, double y1, double z1, double x2, double y2, double 
     return sqrt( (x1-x2)*(x1-x2) + (y1-y2)*(y1-y2) + (z1-z2)*(z1-z2) );
 }
 
+int mdc(int n1, int n2){
+    if(n2 ==0) return n1;
+    else return mdc(n2, n1%n2);
+}
+
 double pontoMedio(double x1, double x2, double y1, double y2, double *xm, double *ym){
     *xm = abs((x1+x2)/2);
     *ym = abs((y1+y2)/2);
@@ -25,9 +30,6 @@ int lastDigit(int a){
 }
 
 int main(void){
-    double n;
-    double n2;
-    pontoMedio(2,4,6,-2,&n,&n2);
-    printf("%lf, %lf",n,n2);
+    printf("\n >>%d\n\n",mdc(49,7));
 }
 
